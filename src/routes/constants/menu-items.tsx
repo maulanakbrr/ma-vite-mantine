@@ -4,7 +4,7 @@ export const menuItems: IMenuItem[] = [
   {
     key: 'home',
     label: "Home",
-    link: "/link"
+    link: "/home"
   },
   {
     key: 'about',

@@ -5,11 +5,12 @@ import { NavLink as RouterNavLink } from 'react-router'
 
 interface INavLinksProps {
   items: IMenuItem[]
+  toggle: () => void
 }
 
-const NavLinks:FC<INavLinksProps> = ({items}) => {
+const NavLinks:FC<INavLinksProps> = ({items, toggle}) => {
   return items.map((item) => (
-    <NavLink key={item.key} component={RouterNavLink} to={item.link || ""} label={item.label}/>
+    <NavLink key={item.key} component={RouterNavLink} to={item.link || ""} onClick={toggle} label={item.label}/>
   ))
 }
 

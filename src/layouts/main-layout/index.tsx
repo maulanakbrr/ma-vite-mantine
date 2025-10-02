@@ -12,14 +12,16 @@ import { useDisclosure, useHeadroom } from '@mantine/hooks';
 import { Outlet } from 'react-router';
 import HeaderLinks from "./components/header-links";
 import NavLinks from "./components/nav-links";
+import ThemeToggleButton from "@/components/theme-toggle-button";
 
 const MainLayout = () => {
   const [opened, { toggle }] = useDisclosure();
   const pinned = useHeadroom({ fixedAt: 120 });
+  console.log('PINNED:: ', pinned)
 
   return (
     <AppShell
-      header={{ height: 60, collapsed: !pinned, offset: false }}
+      header={{ height: 60, collapsed: !pinned }}
       navbar={{ 
         width: 300, 
         breakpoint: 'sm', 
@@ -38,14 +40,15 @@ const MainLayout = () => {
               <HeaderLinks items={menuItems}/>
             </Group>
           </Group>
+          <ThemeToggleButton/>
         </Group>
       </AppShellHeader>
 
       <AppShellNavbar py="md" px={4}>
-        <NavLinks items={menuItems}/>
+        <NavLinks items={menuItems} toggle={toggle}/>
       </AppShellNavbar>
 
-      <AppShellMain>
+      <AppShellMain pt="calc(var(--app-shell-header-height) + 16px)">
         <Outlet/>
       </AppShellMain>
 
