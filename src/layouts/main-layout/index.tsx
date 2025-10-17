@@ -52,7 +52,7 @@ const MainLayout = () => {
         <Outlet/>
       </AppShellMain>
 
-      <AppShellFooter p="sm">
+      <AppShellFooter p="sm" className="static">
         <div className="flex justify-center font-bold">
           Some Copyright
         </div>

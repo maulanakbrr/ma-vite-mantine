@@ -1,7 +1,7 @@
 import { Anchor, Box, Button, PasswordInput, Text, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { notifications } from '@mantine/notifications';
-import { NavLink } from 'react-router';
+import { NavLink, useNavigate } from 'react-router';
 
 interface ISimpleLoginFormValueProps {
   username: string;
@@ -9,6 +9,7 @@ interface ISimpleLoginFormValueProps {
 }
 
 const SimpleLoginForm = () => {
+  const navigate = useNavigate()
   const form = useForm({
     initialValues: {
       username: '',
@@ -27,6 +28,7 @@ const SimpleLoginForm = () => {
       autoClose: 3000
     })
     console.log('Form submitted:', values);
+    navigate('/home')
   };
 
   return (

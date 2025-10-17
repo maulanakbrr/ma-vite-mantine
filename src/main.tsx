@@ -6,6 +6,7 @@ import { theme } from './theme.tsx'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
+import '@mantine/carousel/styles.css';
 import './index.css'
 import { Notifications } from '@mantine/notifications'
 
