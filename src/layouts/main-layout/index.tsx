@@ -17,7 +17,6 @@ import ThemeToggleButton from "@/components/theme-toggle-button";
 const MainLayout = () => {
   const [opened, { toggle }] = useDisclosure();
   const pinned = useHeadroom({ fixedAt: 120 });
-  console.log('PINNED:: ', pinned)
 
   return (
     <AppShell
@@ -25,7 +24,8 @@ const MainLayout = () => {
       navbar={{ 
         width: 300, 
         breakpoint: 'sm', 
-        collapsed: { desktop: true, mobile: !opened } }}
+        collapsed: { desktop: true, mobile: !opened } 
+      }}
       padding="md"
       footer={{ height: 50 }}
       transitionDuration={500}

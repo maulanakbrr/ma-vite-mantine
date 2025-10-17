@@ -3,7 +3,9 @@ import { IconMoon, IconSun } from '@tabler/icons-react';
 
 const ThemeToggleButton = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const dark = colorScheme === 'dark';
+  const dark = colorScheme === 'dark' ||
+    (colorScheme === 'auto' &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches);
 
   return (
     <ActionIcon variant='transparent' onClick={() => toggleColorScheme()}>

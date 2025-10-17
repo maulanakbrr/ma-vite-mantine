@@ -5,6 +5,8 @@ import MainLayout from "@/layouts/main-layout";
 import AboutPage from "@/pages/about";
 import TestimonyPage from "@/pages/testimony";
 import GalleryPage from "@/pages/gallery";
+import LoginLayout from "@/layouts/login-layout";
+import LoginRegisterPage from "@/pages/login-register";
 
 export const routeList = createBrowserRouter([
   {
@@ -29,6 +31,19 @@ export const routeList = createBrowserRouter([
       {
         path: '/gallery',
         Component: GalleryPage
+      },
+    ]
+  },
+  {
+    element: <LoginLayout/>,
+    children: [
+      {
+        path: '/login',
+        Component: LoginRegisterPage
+      },
+      {
+        path: '/register',
+        Component: LoginRegisterPage
       },
     ]
   }
