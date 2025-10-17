@@ -1,5 +1,6 @@
 import { Anchor, Box, Button, PasswordInput, Text, TextInput, Title } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import { notifications } from '@mantine/notifications';
 import { NavLink } from 'react-router';
 
 interface ISimpleLoginFormValueProps {
@@ -20,6 +21,11 @@ const SimpleLoginForm = () => {
   });
 
   const handleSubmit = (values: ISimpleLoginFormValueProps) => {
+    notifications.show({
+      title: 'Login Success',
+      message: 'Welcome back!',
+      autoClose: 3000
+    })
     console.log('Form submitted:', values);
   };
 
