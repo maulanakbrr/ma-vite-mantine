@@ -1,3 +1,4 @@
+import ThemeToggleButton from "@/components/theme-toggle-button";
 import { menuItems } from "@/routes/constants/menu-items";
 import {
   AppShell,
@@ -10,9 +11,9 @@ import {
 } from "@mantine/core";
 import { useDisclosure, useHeadroom } from '@mantine/hooks';
 import { Outlet } from 'react-router';
+import LayoutFooter from "./components/footer";
 import HeaderLinks from "./components/header-links";
 import NavLinks from "./components/nav-links";
-import ThemeToggleButton from "@/components/theme-toggle-button";
 
 const MainLayout = () => {
   const [opened, { toggle }] = useDisclosure();
@@ -27,7 +28,7 @@ const MainLayout = () => {
         collapsed: { desktop: true, mobile: !opened } 
       }}
       padding="md"
-      footer={{ height: 50 }}
+      footer={{ height: 200 }}
       transitionDuration={500}
       transitionTimingFunction="ease"
     >
@@ -53,9 +54,7 @@ const MainLayout = () => {
       </AppShellMain>
 
       <AppShellFooter p="sm" className="static">
-        <div className="flex justify-center font-bold">
-          Some Copyright
-        </div>
+        <LayoutFooter/>
       </AppShellFooter>
     </AppShell>
   )
