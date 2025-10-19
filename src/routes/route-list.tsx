@@ -36,13 +36,14 @@ export const routeList = createBrowserRouter([
   },
   {
     element: <LoginLayout/>,
+    path: 'app',
     children: [
       {
-        path: '/login',
+        path: 'login',
         Component: LoginRegisterPage
       },
       {
-        path: '/register',
+        path: 'register',
         Component: LoginRegisterPage
       },
     ]

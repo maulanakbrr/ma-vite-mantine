@@ -53,7 +53,7 @@ const SimpleLoginForm = () => {
           Login
         </Button>
 
-        <Text size='sm' mt={16} ta="center">Don't have an account? <Anchor component={NavLink} to='/register'>Register Now</Anchor></Text>
+        <Text size='sm' mt={16} ta="center">Don't have an account? <Anchor component={NavLink} to='/app/register'>Register Now</Anchor></Text>
       </form>
     </Box>
   );

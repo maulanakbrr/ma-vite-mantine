@@ -70,7 +70,7 @@ const SimpleRegisterForm = () => {
           Register
         </Button>
 
-        <Text size='sm' mt={16} ta="center">Already have an account? <Anchor component={NavLink} to='/login'>Login</Anchor></Text>
+        <Text size='sm' mt={16} ta="center">Already have an account? <Anchor component={NavLink} to='/app/login'>Login</Anchor></Text>
       </form>
     </Box>
   );
