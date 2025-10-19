@@ -1,7 +1,8 @@
+import Testimony from "@/features/testimony"
 
 const TestimonyPage = () => {
   return (
-    <div>TestimonyPage</div>
+    <Testimony/>
   )
 }
 
