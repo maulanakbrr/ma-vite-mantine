@@ -1,7 +1,8 @@
+import About from "@/features/about"
 
 const AboutPage = () => {
   return (
-    <div>AboutPage</div>
+    <About/>
   )
 }
 
