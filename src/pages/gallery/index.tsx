@@ -1,7 +1,8 @@
+import Gallery from "@/features/gallery"
 
 const GalleryPage = () => {
   return (
-    <div>GalleryPage</div>
+    <Gallery/>
   )
 }
 
