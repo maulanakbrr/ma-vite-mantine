@@ -1,12 +1,18 @@
-import { createBrowserRouter } from "react-router";
-import BaseRouteLoader from "./base-route";
-import HomePage from "@/pages/home";
+import AppLayout from "@/layouts/app-layout";
+import LoginLayout from "@/layouts/login-layout";
 import MainLayout from "@/layouts/main-layout";
 import AboutPage from "@/pages/about";
-import TestimonyPage from "@/pages/testimony";
+import AppDashboardPage from "@/pages/app/dashboard";
 import GalleryPage from "@/pages/gallery";
-import LoginLayout from "@/layouts/login-layout";
+import HomePage from "@/pages/home";
 import LoginRegisterPage from "@/pages/login-register";
+import TestimonyPage from "@/pages/testimony";
+import { createBrowserRouter } from "react-router";
+import BaseRouteLoader from "./base-route";
+import AppExpensesPage from "@/pages/app/expenses";
+import AppIncomePage from "@/pages/app/income";
+import AppBudgetingPage from "@/pages/app/budgeting";
+import AppTransactionPage from "@/pages/app/transaction";
 
 export const routeList = createBrowserRouter([
   {
@@ -35,17 +41,46 @@ export const routeList = createBrowserRouter([
     ]
   },
   {
-    element: <LoginLayout/>,
     path: 'app',
     children: [
       {
-        path: 'login',
-        Component: LoginRegisterPage
+        element: <LoginLayout/>,
+        children: [
+          {
+            path: 'login',
+            Component: LoginRegisterPage
+          },
+          {
+            path: 'register',
+            Component: LoginRegisterPage
+          },
+        ]
       },
       {
-        path: 'register',
-        Component: LoginRegisterPage
-      },
+        element: <AppLayout/>,
+        children: [
+          {
+            path: 'dashboard',
+            Component: AppDashboardPage
+          },
+          {
+            path: 'money-tracking/expenses',
+            Component: AppExpensesPage
+          },
+          {
+            path: 'money-tracking/income',
+            Component: AppIncomePage
+          },
+          {
+            path: 'budgeting',
+            Component: AppBudgetingPage
+          },
+          {
+            path: 'transactions',
+            Component: AppTransactionPage
+          },
+        ]
+      }
     ]
   }
 ])

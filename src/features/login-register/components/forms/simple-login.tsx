@@ -28,7 +28,7 @@ const SimpleLoginForm = () => {
       autoClose: 3000
     })
     console.log('Form submitted:', values);
-    navigate('/home')
+    navigate('/app/dashboard')
   };
 
   return (
