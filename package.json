@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@mantine/carousel": "^8.3.1",
+    "@mantine/charts": "^8.3.1",
     "@mantine/core": "^8.3.1",
     "@mantine/form": "^8.3.1",
     "@mantine/hooks": "^8.3.1",
@@ -21,7 +22,8 @@
     "embla-carousel-react": "^8.6.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-router": "^7.9.1"
+    "react-router": "^7.9.1",
+    "recharts": "^3.3.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
