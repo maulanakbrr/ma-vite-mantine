@@ -6,8 +6,11 @@ import { formatToIDRShort } from "@/utils/currency";
 const AppDashboardProgressSummaryWidget = () => {
   return (
     <Card shadow="sm" p="lg" radius="md" withBorder>
-      <Text fw={600} mb="sm" size="lg">
-        Monthly Income vs Expenses
+      <Text fw={600} mb={4} size="lg">
+        Cash Flow Breakdown
+      </Text>
+      <Text mb="sm" size="sm">
+        your yearly incomes vs expenses
       </Text>
 
       <AreaChart

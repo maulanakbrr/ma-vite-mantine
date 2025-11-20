@@ -2,6 +2,7 @@ import { Grid, Title } from "@mantine/core"
 import AppDashboardSummaryCard from "./components/cards/summary-card"
 import { APP_DASHBOARD_SUMMARY_DATA } from "./dummy" 
 import AppDashboardProgressSummaryWidget from "./components/widgets/progress-summary"
+import AppDashboardTopTransactions from "./components/widgets/top-transactions"
 
 const AppDashboard = () => {
   return (
@@ -23,7 +24,7 @@ const AppDashboard = () => {
           <AppDashboardProgressSummaryWidget/>
         </Grid.Col>
         <Grid.Col span={{ base: 12, sm: 4 }}>
-          
+          <AppDashboardTopTransactions/>
         </Grid.Col>
       </Grid>
     </>

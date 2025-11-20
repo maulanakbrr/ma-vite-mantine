@@ -39,3 +39,41 @@ export const APP_DASHBOARD_PROGRESS_SUMMARY_DATA = [
   { month: 'Nov', Income: 13000000, Expense: 10000000 },
   { month: 'Dec', Income: 14000000, Expense: 11000000 },
 ]
+
+export const APP_DASHBOARD_TOP_TRANSACTIONS_COMBO_BOX_OPTIONS = [
+  {
+    label: 'Date',
+    value: 'DATE'
+  },
+  {
+    label: 'Month',
+    value: 'MONTH'
+  },
+  {
+    label: 'Year',
+    value: 'YEAR'
+  },
+];
+
+export const APP_DASHBOARD_TOP_TRANSACTIONS_LIST = [
+  {
+    label: "Highest Income",
+    description: "Payment for Service A",
+    amount: "$20,000",
+  },
+  {
+    label: "Largest Expense",
+    description: "Purchase of Office Equipment",
+    amount: "$12,000",
+  },
+  {
+    label: "Most Frequent Vendor",
+    description: "Subscription to Cloud Service",
+    amount: "$3,200",
+  },
+  {
+    label: "Top Recurring Payment",
+    description: "Monthly Lease Payment for Office Space",
+    amount: "$4,500",
+  },
+]
