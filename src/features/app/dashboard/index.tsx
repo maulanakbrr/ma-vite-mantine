@@ -4,6 +4,7 @@ import { APP_DASHBOARD_RECENT_TRANSACTIONS_LIST, APP_DASHBOARD_SUMMARY_DATA } fr
 import AppDashboardProgressSummaryWidget from "./components/widgets/progress-summary"
 import AppDashboardTopTransactions from "./components/widgets/top-transactions"
 import AppDashboardRecentTransactions from "./components/widgets/recent-transactions"
+import AppDashboardBudgetProgress from "./components/widgets/budget-progress"
 
 const AppDashboard = () => {
   return (
@@ -35,6 +36,9 @@ const AppDashboard = () => {
           <AppDashboardRecentTransactions
             data={APP_DASHBOARD_RECENT_TRANSACTIONS_LIST}
           />
+        </Grid.Col>
+        <Grid.Col span={{ base: 12, sm: 4 }}>
+          <AppDashboardBudgetProgress/>
         </Grid.Col>
       </Grid>
     </>

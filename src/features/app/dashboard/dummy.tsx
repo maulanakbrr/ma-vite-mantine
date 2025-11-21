@@ -112,3 +112,22 @@ export const APP_DASHBOARD_RECENT_TRANSACTIONS_LIST:TRecentTransactionItem[] = [
     type: "expense",
   },
 ];
+
+export const APP_DASHBOARD_BUDGET_PROGRESS_LIST = [
+  {
+    id: '1',
+    name: 'Monthly Allowance',
+    type: 'expenses',
+    category: 'montly',
+    budget: 5000000,
+    use: 3500000
+  },
+  {
+    id: '2',
+    name: 'Work',
+    type: 'expenses',
+    category: 'work',
+    budget: 2000000,
+    use: 1500000
+  }
+]
