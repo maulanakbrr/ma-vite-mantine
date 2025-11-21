@@ -1,5 +1,5 @@
 import { IconMoneybagMinus, IconMoneybagPlus, IconPig } from "@tabler/icons-react";
-import type { TAppDashboardSummaryItem } from "./types";
+import type { TAppDashboardSummaryItem, TRecentTransactionItem } from "./types";
 
 export const APP_DASHBOARD_SUMMARY_DATA:TAppDashboardSummaryItem[] = [
   {
@@ -77,3 +77,38 @@ export const APP_DASHBOARD_TOP_TRANSACTIONS_LIST = [
     amount: "$4,500",
   },
 ]
+
+export const APP_DASHBOARD_RECENT_TRANSACTIONS_LIST:TRecentTransactionItem[] = [
+  {
+    id: "1",
+    date: "2025-01-15",
+    description: "Payment for Service A",
+    category: "Income",
+    amount: 20000,
+    type: "income",
+  },
+  {
+    id: "2",
+    date: "2025-01-12",
+    description: "Office Equipment Purchase",
+    category: "Expense",
+    amount: 12000,
+    type: "expense",
+  },
+  {
+    id: "3",
+    date: "2025-01-10",
+    description: "Cloud Service Subscription",
+    category: "Vendor",
+    amount: 3200,
+    type: "expense",
+  },
+  {
+    id: "4",
+    date: "2025-01-05",
+    description: "Office Space Lease",
+    category: "Recurring",
+    amount: 4500,
+    type: "expense",
+  },
+];

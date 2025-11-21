@@ -8,6 +8,7 @@ import '@mantine/core/styles.css';
 import '@mantine/notifications/styles.css';
 import '@mantine/carousel/styles.css';
 import '@mantine/charts/styles.css';
+import 'mantine-datatable/styles.layer.css';
 import './index.css'
 import { Notifications } from '@mantine/notifications'
 
